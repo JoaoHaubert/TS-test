@@ -44,4 +44,48 @@ setTimeout(function () {
     const salario = 4000;
     //console.log((salario))
 }, 1000);
-//Tipagem Objetos
+//Tipagem Objetos **definindo os dados que irao conter em determinado objeto**
+function shoesSpecs(shoes) {
+    console.log("Shoes color are: " + shoes.color);
+    console.log("Shoes size are: " + shoes.size);
+}
+const objShoes = { color: "green", size: 9.5 };
+shoesSpecs(objShoes);
+shoesSpecs({ color: "white", size: 9 });
+//Props. Opcionais **utilizando o ponto de interro. podemos deixar props opcionais**
+function showNumbers(a, b, c) {
+    console.log("A = " + a);
+    console.log("B = " + b);
+    //Usandio esse "if" o C nao sai como undefined caso nao tenha valor pra ele.
+    if (c != undefined) {
+        console.log("C = " + c);
+    }
+}
+showNumbers(3, 2, 1);
+showNumbers(9, 8);
+//Validacao parametro opcional **melhor modo para validar**
+function greetinAgain(firstName, lastName) {
+    if (lastName != undefined) {
+        return `Eai ${firstName} ${lastName}, tudo belezinha?`;
+    }
+    return `Eai ${firstName}, tudo belezinha?`;
+}
+console.log(greetinAgain("Joao", "Haubert"));
+console.log(greetinAgain("Joao"));
+//Union Type **usando dos tipos para uma prop diferente**
+function showShoesSize(size) {
+    console.log(`O tamanho do tênis é ${size}`);
+}
+showShoesSize(3);
+showShoesSize("6");
+//showShoesSize(true) **erro** 
+//Avancando em union types
+function showUserRole(role) {
+    if (typeof role === "boolean") {
+        return "Usuario nao aprovado";
+    }
+    return `A funcao do usuario e: ${role}`;
+}
+console.log(showUserRole(false));
+console.log(showUserRole("Admin"));
+//
