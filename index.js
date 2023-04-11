@@ -88,4 +88,52 @@ function showUserRole(role) {
 }
 console.log(showUserRole(false));
 console.log(showUserRole("Admin"));
-//
+function showWage(wage) {
+    console.log(`The average wage is: $${wage}`);
+}
+showWage(23330);
+showWage("8938");
+function showCars(obj) {
+    console.log(`Car: ${obj.carName}`);
+    console.log(`Color: ${obj.color}`);
+    console.log(`Year: ${obj.year}`);
+}
+const carObj = {
+    carName: "Jetta",
+    color: "Silver",
+    year: 2009
+};
+showCars(carObj);
+const someCar = {
+    name: "Celta", year: 1997
+};
+console.log(someCar);
+//Erro de duplicacao de identificador "carType"
+//type carType = {
+//year: number
+//}
+//Literal types
+function showColors(color) {
+    console.log(`The color is ${color}`);
+}
+showColors("orange");
+showColors("blue");
+showColors("green");
+//showColors("purple") **Erro o literal types aceitarar somente as strings definidas na propriedade.
+//non null assertion operator
+const p = document.getElementById("some-p");
+console.log(p.innerText);
+//usar ! para cancelar o erro e mostrar o que realmente esta no html.
+//BigInt
+let num;
+//num = 1  **Erro, numero muito pequeno para operar com bigint.
+num = 100n;
+console.log(num);
+console.log(typeof num);
+console.log(num + 500n);
+//Symbol
+let symbolA = Symbol("a");
+let symbolB = Symbol("b");
+//Symbol cria um tipo unico.
+console.log(symbolA == symbolB);
+console.log(symbolA === symbolB);
