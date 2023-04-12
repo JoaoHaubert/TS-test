@@ -66,4 +66,15 @@ function defaultSum(num1, num2 = 15) {
 }
 console.log(defaultSum(25));
 console.log(defaultSum(21, 23));
-//Unknown type
+//Unknown type (parecido com o any)
+function doStuff(stuff) {
+    if (Array.isArray(stuff)) {
+        return console.log(stuff[1]);
+    }
+    else
+        return console.log(stuff);
+}
+doStuff(1);
+doStuff("1");
+doStuff([4, 5, 6]);
+doStuff({ name: "Joao" });
