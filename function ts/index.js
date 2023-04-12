@@ -60,3 +60,10 @@ function mergeArrays(arr1, arr2, arr3) {
 }
 console.log(mergeArrays([102, 238, 334], [6, 8, 123]));
 console.log(mergeArrays([102, 238, 334], [6, 8, 123], [24, 56, 145]));
+//Default parameters
+function defaultSum(num1, num2 = 15) {
+    return num1 + num2;
+}
+console.log(defaultSum(25));
+console.log(defaultSum(21, 23));
+//Unknown type

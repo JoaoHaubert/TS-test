@@ -76,3 +76,13 @@ function mergeArrays<T>(arr1: T[], arr2: T[], arr3?: T[]) {
 
 console.log(mergeArrays([102,238,334], [6, 8, 123]))
 console.log(mergeArrays([102,238,334], [6, 8, 123], [24, 56, 145]))
+
+//Default parameters
+function defaultSum(num1: number, num2 = 15 ): number {
+    return num1 + num2
+}
+
+console.log(defaultSum(25))
+console.log(defaultSum(21, 23))
+
+//Unknown type
