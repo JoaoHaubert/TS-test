@@ -25,7 +25,7 @@ function operations(arr, operation) {
         console.log(multiply);
     }
     else {
-        console.log("O sistema não superta este tipo de operação");
+        console.log("O sistema não suporta este tipo de operação");
     }
 }
 operations([10, 20, 30], "sum");
@@ -77,3 +77,13 @@ function carDetails(car) {
 }
 carDetails(celta);
 carDetails(corsa);
+function reviews(review) {
+    if (!review) {
+        console.log("O produto nao foi avaliado");
+    }
+    else {
+        console.log(`Obrigado pelo feedback a nota de avalicao foi ${review}`);
+    }
+}
+reviews(false);
+reviews(5);

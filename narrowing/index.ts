@@ -23,7 +23,7 @@ function operations(arr: number[], operation?: string | undefined) {
         const multiply = arr.reduce((i, total) => i * total)
         console.log(multiply)
     } else {
-        console.log("O sistema não superta este tipo de operação")
+        console.log("O sistema não suporta este tipo de operação")
     }
 } 
 
@@ -89,3 +89,17 @@ function carDetails(car: Car) {
 
 carDetails(celta)
 carDetails(corsa)
+
+//Desafio narrowing
+type Review = number | boolean
+
+function reviews(review: Review) {
+    if(!review) {
+        console.log("O produto nao foi avaliado")
+    } else {
+        console.log(`Obrigado pelo feedback a nota de avalicao foi ${review}`)
+    }
+}
+
+reviews(false)
+reviews(5)
