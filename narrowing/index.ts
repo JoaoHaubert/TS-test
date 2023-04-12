@@ -13,7 +13,7 @@ sum("23", "50")
 sum(34, 50)
 sum("32", 90)
 
-//Checkin if value exists
+//Check if value exists
 function operations(arr: number[], operation?: string | undefined) {
     if(operation === "sum") {
         const sum = arr.reduce((i, total) => i + total)
@@ -30,3 +30,35 @@ function operations(arr: number[], operation?: string | undefined) {
 operations([10,20,30], "sum")
 operations([10,5,5], "multiply")
 operations([1,2,3], "division")
+
+//Instace of
+class Iphone {
+    iphone
+
+    constructor(iphone: string) {
+        this.iphone = iphone
+    }
+}
+
+class SuperIphone extends Iphone {
+    constructor(iphone: string) {
+        super(iphone)
+    }
+}
+
+const i12 = new Iphone("Iphone 12")
+const i14 = new SuperIphone("Iphone 14")
+
+console.log(i12)
+console.log(i14)
+
+function recieveIphone(user: object) {
+    if(user instanceof SuperIphone) {
+        console.log(`O ${user.iphone} é o celular mais eficiente do mercado!`)
+    } else if (user instanceof Iphone) {
+        console.log(`O ${user.iphone} continua sendo um bom custo beneficio.`)
+    }
+}
+
+recieveIphone(i12)
+recieveIphone(i14)
