@@ -82,5 +82,11 @@ doStuff({ name: "Joao" });
 function errorMessage(msg) {
     throw new Error(msg);
 }
-console.log(errorMessage("Ocorreu um erro!"));
+//console.log(errorMessage("Ocorreu um erro!"))
 //Nunca ira retornar o console.log aparecera na aba de error
+//Rest parameters
+function multiplyAll(...num) {
+    return num.reduce((number, mult) => mult * number);
+}
+console.log(multiplyAll(2, 2, 3));
+//console.log(multiplyAll("2", "2", "3")) **somente number**
