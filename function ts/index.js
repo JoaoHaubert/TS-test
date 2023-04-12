@@ -51,4 +51,12 @@ function mergeArr(arr1, arr2) {
 }
 console.log(mergeArr([1, 2, 3], [6, 8, 123]));
 console.log(mergeArr([1, 2, 3], ["a", "b", "c"]));
-//
+//Optinal parameters
+function mergeArrays(arr1, arr2, arr3) {
+    if (arr3) {
+        return arr1.concat(arr2, arr3);
+    }
+    return arr1.concat(arr2);
+}
+console.log(mergeArrays([102, 238, 334], [6, 8, 123]));
+console.log(mergeArrays([102, 238, 334], [6, 8, 123], [24, 56, 145]));

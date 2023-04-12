@@ -66,4 +66,13 @@ function mergeArr<T>(arr1: T[], arr2: T[]) {
 console.log(mergeArr([1,2,3], [6, 8, 123]))
 console.log(mergeArr<number | string>([1,2,3], ["a", "b", "c"]))
 
-//
+//Optinal parameters
+function mergeArrays<T>(arr1: T[], arr2: T[], arr3?: T[]) {
+    if(arr3) {
+        return arr1.concat(arr2, arr3)
+    }
+    return arr1.concat(arr2)
+}
+
+console.log(mergeArrays([102,238,334], [6, 8, 123]))
+console.log(mergeArrays([102,238,334], [6, 8, 123], [24, 56, 145]))
