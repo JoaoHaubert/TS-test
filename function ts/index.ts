@@ -20,3 +20,24 @@ function preCar(f: (carName: string) => string, carsName: string) {
 }
 
 preCar(car, "Corvette")
+
+//Generic functions
+function firstArray<T>(arr: T[]): T {
+    return arr[0]
+}
+
+console.log(firstArray([8, 9, 10]))
+console.log(firstArray(["h", "i", "j"]))
+//console.log(firstArray("batata")) **O modo generico aceita somente lista**
+
+function mergeObjects<U, T>(obj1: U, obj2?: T){
+    return {
+        ...obj1,
+        ...obj2
+    }
+}
+
+const newObj = mergeObjects({name: "Joao"}, {age: 25, job: "jr. developer"})
+console.log(newObj)
+
+//Constraint generic function
