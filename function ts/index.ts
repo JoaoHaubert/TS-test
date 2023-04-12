@@ -97,3 +97,11 @@ doStuff(1)
 doStuff("1")
 doStuff([4, 5, 6])
 doStuff({name: "Joao"})
+
+//Never type
+function errorMessage(msg: string): never {
+    throw new Error(msg)
+}
+
+console.log(errorMessage("Ocorreu um erro!"))
+//Nunca ira retornar o console.log aparecera na aba de error
