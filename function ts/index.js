@@ -31,3 +31,17 @@ function mergeObjects(obj1, obj2) {
 const newObj = mergeObjects({ name: "Joao" }, { age: 25, job: "jr. developer" });
 console.log(newObj);
 //Constraint generic function
+function strNumbers(a, b) {
+    let strNumbers;
+    if (+a > +b) {
+        strNumbers = a;
+    }
+    else {
+        strNumbers = b;
+    }
+    return strNumbers;
+}
+console.log(strNumbers(8, 99));
+console.log(strNumbers("80", "78"));
+//console.log(strNumbers(false, true)) **Erro union type somente para numero e strings**
+//console.log(strNumbers(10, "2")) **Erro estaria usando somente um tipo de generic**
