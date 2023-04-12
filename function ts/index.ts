@@ -57,3 +57,13 @@ console.log(strNumbers(8,99))
 console.log(strNumbers("80","78"))
 //console.log(strNumbers(false, true)) **Erro union type somente para numero e strings**
 //console.log(strNumbers(10, "2")) **Erro estaria usando somente um tipo de generic**
+
+//Type parameters generic function
+function mergeArr<T>(arr1: T[], arr2: T[]) {
+    return arr1.concat(arr2)
+}
+
+console.log(mergeArr([1,2,3], [6, 8, 123]))
+console.log(mergeArr<number | string>([1,2,3], ["a", "b", "c"]))
+
+//
