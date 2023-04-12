@@ -62,3 +62,30 @@ function recieveIphone(user: object) {
 
 recieveIphone(i12)
 recieveIphone(i14)
+
+//In operator
+class Car {
+    name
+    year
+
+    constructor(name: string, year?: number) {
+        this.name = name
+        if (year) {
+            this.year = year
+        }
+    }
+}
+
+const celta = new Car("Celta")
+const corsa = new Car("Corsa", 2007)
+
+function carDetails(car: Car) {
+    if ('year' in car) {
+        console.log(`O ${car.name} foi fabricado no ano de ${car.year}`)
+    } else {
+        console.log(`O carro não possuí o ano de fabricação.`)
+    }
+}
+
+carDetails(celta)
+carDetails(corsa)
