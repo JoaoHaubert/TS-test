@@ -151,3 +151,26 @@ const truck2: SuperTruck = {
 console.log(truck1)
 console.log(truck2)
 console.log(truck2.mod[0])
+
+//Intersection types
+interface Laptop {
+    brand: string
+    processor: string
+}
+
+interface Peripherals {
+    mouse: string
+    keyboard: string
+}
+
+type LaptopPeriph = Laptop & Peripherals
+
+const setup: LaptopPeriph = {
+    brand: "asus",
+    processor: "i5 11th",
+    mouse: "G305",
+    keyboard: "EG-204RB"
+}
+
+console.log(setup)
+console.log(setup.mouse)
