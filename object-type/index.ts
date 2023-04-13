@@ -71,4 +71,40 @@ const specialized: Bike = {
 
 //specialized.wheels = 3  **Nao pode adicionar nada a wheels porque a readonly assume o valor passado e nao muda.
 
-//Index signature
+//Exercising
+interface Bus {
+    brand: string
+    model: string
+    year: number
+    capacity: number
+    wheels: number
+    conductor?: string
+}
+
+function showBusses(bus: Bus) {
+    console.log(`Bus info... brand: ${bus.brand}, model: ${bus.model}, year: ${bus.year}, capacity: ${bus.capacity}, wheels: ${bus.wheels}`)
+
+    if(bus.conductor) {
+        console.log(`${bus.conductor} is driving the bus`)
+    }
+}
+const bus1: Bus = {
+    brand: "Marcopolo",
+    model: "RLI2",
+    year: 2023,
+    capacity: 68,
+    wheels: 8,
+}
+const bus2: Bus = {
+    brand: "Marcopolo",
+    model: "wx4",
+    year: 2021,
+    capacity: 60,
+    wheels: 8,
+    conductor: "Jose Almeida"
+}
+
+showBusses(bus1)
+showBusses(bus2)
+
+//Index Signature
