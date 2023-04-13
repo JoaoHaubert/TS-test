@@ -126,7 +126,4 @@ console.log(shoesDetails(shoes))
 console.log(shoesDetails(shoes2))
 console.log(shoesDetails({shoes: "Airjordan 3", price: 899.99}))
 //console.log(shoesDetails({shoes: "Airjordan 6", price: 499.99, size: 15}))
-//Erro por ter posto um parametro que nao existe na function
-
-
-//
+//Erro por ter posto um parametro que nao existe na function.
