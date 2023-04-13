@@ -108,3 +108,18 @@ showBusses(bus1)
 showBusses(bus2)
 
 //Index Signature
+interface CoordObject {
+    [index: string]: number
+}
+
+const coords: CoordObject = {
+    a: 10
+}
+
+coords.b = 15
+
+coords.c = 18
+
+//coords.d = "a" **Erro - foi tipado como numero**
+
+console.log(coords)

@@ -62,4 +62,10 @@ const bus2 = {
 };
 showBusses(bus1);
 showBusses(bus2);
-//Index Signature
+const coords = {
+    a: 10
+};
+coords.b = 15;
+coords.c = 18;
+//coords.d = "a" **Erro - foi tipado como numero**
+console.log(coords);
