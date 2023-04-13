@@ -91,3 +91,15 @@ const setup = {
 };
 console.log(setup);
 console.log(setup.mouse);
+//ReadOnly Array
+const numArray = [1, 2, 3, 4, 5];
+//numArray[5] = 6 *Erro. com read only a array se mantem estatica.
+console.log(numArray);
+numArray.forEach((item) => {
+    console.log("numero " + item);
+});
+numArray.map((item) => {
+    console.log(`numero ${item}`);
+});
+console.log(numArray);
+//
