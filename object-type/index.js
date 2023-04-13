@@ -35,3 +35,9 @@ const car2 = {
 };
 carDetails(car1);
 carDetails(car2);
+const specialized = {
+    brand: "Specialized",
+    wheels: 2
+};
+//specialized.wheels = 3  **Nao pode adicionar nada a wheels porque a readonly assume o valor passado e nao muda.
+//Index signature

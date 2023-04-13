@@ -57,3 +57,18 @@ const car2: Car = {
 
 carDetails(car1)
 carDetails(car2)
+
+//readonly properties
+interface Bike {
+    brand: string
+    readonly wheels: number
+}
+
+const specialized: Bike = {
+    brand: "Specialized",
+    wheels: 2
+}
+
+//specialized.wheels = 3  **Nao pode adicionar nada a wheels porque a readonly assume o valor passado e nao muda.
+
+//Index signature
