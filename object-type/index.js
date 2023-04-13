@@ -16,3 +16,22 @@ const shoes = {
 };
 shoesDetails(shoes);
 shoesDetails({ shoes: "Airjordan 2", price: 599.99, size: 10, isAvaible: false });
+function carDetails(car) {
+    console.log(`The is is an ${car.car} the fabrication was in ${car.year} and it color is ${car.color}`);
+    if (car.chassis) {
+        console.log(`The chassis code is ${car.chassis}`);
+    }
+}
+const car1 = {
+    car: "Corvette",
+    year: 2007,
+    color: "black"
+};
+const car2 = {
+    car: "Eclipse",
+    year: 2005,
+    color: "red",
+    chassis: "A2141CXQ3123"
+};
+carDetails(car1);
+carDetails(car2);

@@ -24,3 +24,36 @@ const shoes: Shoes = {
 
 shoesDetails(shoes)
 shoesDetails({shoes: "Airjordan 2", price: 599.99, size: 10, isAvaible:false})
+
+
+//Optinal properties in interfaces
+interface Car {
+    car: string
+    year: number
+    color: string
+    chassis?: string
+}
+
+function carDetails(car: Car) {
+    console.log(`The is is an ${car.car} the fabrication was in ${car.year} and it color is ${car.color}`)
+
+    if(car.chassis) {
+        console.log(`The chassis code is ${car.chassis}`)
+    }
+}
+
+const car1: Car = {
+    car: "Corvette",
+    year: 2007,
+    color: "black"
+}
+
+const car2: Car = {
+    car: "Eclipse",
+    year: 2005,
+    color: "red",
+    chassis: "A2141CXQ3123"
+}
+
+carDetails(car1)
+carDetails(car2)
