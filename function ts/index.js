@@ -90,3 +90,15 @@ function multiplyAll(...num) {
 }
 console.log(multiplyAll(2, 2, 3));
 //console.log(multiplyAll("2", "2", "3")) **somente number**
+//Destructuring parameters
+function shoesDetails({ shoes, price }) {
+    return `The shoes are ${shoes} and the price for them is $${price}`;
+}
+const shoes = { shoes: "Airjordan 21", price: 259.99 };
+const shoes2 = { shoes: "Airjordan 1", price: 9999.99 };
+console.log(shoesDetails(shoes));
+console.log(shoesDetails(shoes2));
+console.log(shoesDetails({ shoes: "Airjordan 3", price: 899.99 }));
+//console.log(shoesDetails({shoes: "Airjordan 6", price: 499.99, size: 15}))
+//Erro por ter posto um parametro que nao existe na function
+//
