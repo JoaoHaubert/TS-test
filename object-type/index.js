@@ -69,3 +69,17 @@ coords.b = 15;
 coords.c = 18;
 //coords.d = "a" **Erro - foi tipado como numero**
 console.log(coords);
+const truck1 = {
+    truck: "Iveco",
+    color: "Blue",
+    year: 2023
+};
+const truck2 = {
+    truck: "DAF",
+    color: "Red",
+    year: 2022,
+    mod: ["Fly", "HP3800"]
+};
+console.log(truck1);
+console.log(truck2);
+console.log(truck2.mod[0]);

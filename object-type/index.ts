@@ -123,3 +123,31 @@ coords.c = 18
 //coords.d = "a" **Erro - foi tipado como numero**
 
 console.log(coords)
+
+//Extending Types
+interface Truck {
+    truck: string
+    color: string
+    year: number
+}
+
+interface SuperTruck extends Truck {
+    mod: string[]
+}
+
+const truck1: Truck = {
+    truck: "Iveco",
+    color: "Blue",
+    year: 2023
+}
+
+const truck2: SuperTruck = {
+    truck: "DAF",
+    color: "Red",
+    year: 2022,
+    mod: ["Fly", "HP3800"]
+}
+
+console.log(truck1)
+console.log(truck2)
+console.log(truck2.mod[0])
