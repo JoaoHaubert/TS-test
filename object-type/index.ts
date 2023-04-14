@@ -192,4 +192,21 @@ numArray.map((item) => {
 
 console.log(numArray)
 
+//Tuplas
+type fourNumbers = [number, number, number, number]
+type fiveNumbers = [number, number, number, number, number]
+
+const myArray: fourNumbers = [1,2,3,4]
+//const myArray2: fourNumbers= [1,2,3,4,5] **Erro, literalmente o type tem 4 numbers, nao pode aumentar o numero de elementos.**
+const myArray3: fiveNumbers = [1,2,3,4,5]
+
+console.log(myArray)
+console.log(myArray3)
+
+type Costumer = [string, number]
+
+const user: Costumer = ["Joao", 25,]
+
+console.log(user)
+
 //

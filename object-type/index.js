@@ -102,4 +102,10 @@ numArray.map((item) => {
     console.log(`numero ${item}`);
 });
 console.log(numArray);
-//
+const myArray = [1, 2, 3, 4];
+//const myArray2: fourNumbers= [1,2,3,4,5] **Erro, literalmente o type tem 4 numbers, nao pode aumentar o numero de elementos.**
+const myArray3 = [1, 2, 3, 4, 5];
+console.log(myArray);
+console.log(myArray3);
+const user = ["Joao", 25];
+console.log(user);
