@@ -107,5 +107,12 @@ const myArray = [1, 2, 3, 4];
 const myArray3 = [1, 2, 3, 4, 5];
 console.log(myArray);
 console.log(myArray3);
-const user = ["Joao", 25];
+const user = ["Joao", 25,];
 console.log(user);
+//Readonly tuplas
+function showArray(numbers) {
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
+showArray([1, 2]);
+//showArray([1]) **Erro, o readonly pede que complete os dois elementos tipados na array nesse caso.**

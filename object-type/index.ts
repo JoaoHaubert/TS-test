@@ -209,4 +209,14 @@ const user: Costumer = ["Joao", 25,]
 
 console.log(user)
 
+//Readonly tuplas
+function showArray(numbers: readonly [number, number]) {
+    //numbers[0] = 16 **Erro, metodo readonly assegura o numero que foi passado e nao pode ser alterado.**
+    console.log(numbers[0])
+    console.log(numbers[1])
+}
+
+showArray([1, 2])
+//showArray([1]) **Erro, o readonly pede que complete os dois elementos tipados na array nesse caso.**
+
 //
