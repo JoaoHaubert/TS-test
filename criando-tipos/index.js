@@ -14,5 +14,7 @@ function showShoes(obj) {
 const shoes = { name: "Airjordan 1", color: "red" };
 const ohterShoes = { color: "red", price: 29.99 };
 console.log(showShoes(shoes));
-//console.log(showShoes(ohterShoes)) **Erro, pois nao estamos passando o unico argumento que ela pede "name".**
-//
+const usedShoes = { name: "AirMax", color: "Red", size: 42, brand: "Nike" };
+const usedLaptop = { name: "X515", color: "Silver", size: "15'3", brand: "Asus" };
+console.log(usedShoes);
+console.log(usedLaptop);
