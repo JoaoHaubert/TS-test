@@ -218,5 +218,3 @@ function showArray(numbers: readonly [number, number]) {
 
 showArray([1, 2])
 //showArray([1]) **Erro, o readonly pede que complete os dois elementos tipados na array nesse caso.**
-
-//

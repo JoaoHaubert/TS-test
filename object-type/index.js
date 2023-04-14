@@ -111,6 +111,7 @@ const user = ["Joao", 25,];
 console.log(user);
 //Readonly tuplas
 function showArray(numbers) {
+    //numbers[0] = 16 **Erro, metodo readonly assegura o numero que foi passado e nao pode ser alterado.**
     console.log(numbers[0]);
     console.log(numbers[1]);
 }
