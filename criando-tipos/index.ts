@@ -78,3 +78,19 @@ const car1: typeof car = "Corsa"
 type x = typeof car
 
 const car3: x = "Clio"
+
+//Indexed Access types
+type SportCar = {brand: string, maxSpeedKm: number}
+
+type maxSpeed = SportCar['maxSpeedKm']
+
+const newSports: SportCar = {
+    brand: "McLaren",
+    maxSpeedKm: 420 
+}
+
+function showMaxSpeed(maxSpeed: maxSpeed) {
+    console.log(`The SportsCar max speed is ${maxSpeed}km/h`)
+}
+
+showMaxSpeed(newSports.maxSpeedKm)

@@ -45,3 +45,11 @@ console.log(showBike(bike1, 'year'));
 const car = "Celta";
 const car1 = "Corsa";
 const car3 = "Clio";
+const newSports = {
+    brand: "McLaren",
+    maxSpeedKm: 420
+};
+function showMaxSpeed(maxSpeed) {
+    console.log(`The SportsCar max speed is ${maxSpeed}km/h`);
+}
+showMaxSpeed(newSports.maxSpeedKm);
