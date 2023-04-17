@@ -50,3 +50,23 @@ const computer = {
 console.log(getItem(computer, "ram"))
 console.log(getItem(computer, "hd"))
 console.log(getItem(computer, "vga"))
+
+//keyof type operator
+type Bike = {brand: string, year: number, mountainBike: boolean}
+
+type B = keyof Bike
+
+function showBike(obj: Bike, brand: B): string {
+    return `${obj[brand]}`
+}
+
+const bike1: Bike = {
+    brand: "Specialized",
+    year: 2018,
+    mountainBike: false
+}
+
+console.log(showBike(bike1, 'brand'))
+console.log(showBike(bike1, 'year'))
+//console.log(showBike(bike1, 'batata')) **Erro, a palavra batata não é uma propriedade dentro do objeto.
+

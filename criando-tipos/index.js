@@ -30,3 +30,13 @@ const computer = {
 console.log(getItem(computer, "ram"));
 console.log(getItem(computer, "hd"));
 console.log(getItem(computer, "vga"));
+function showBike(obj, brand) {
+    return `${obj[brand]}`;
+}
+const bike1 = {
+    brand: "Specialized",
+    year: 2018,
+    mountainBike: false
+};
+console.log(showBike(bike1, 'brand'));
+console.log(showBike(bike1, 'year'));
