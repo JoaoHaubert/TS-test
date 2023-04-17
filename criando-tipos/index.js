@@ -40,3 +40,8 @@ const bike1 = {
 };
 console.log(showBike(bike1, 'brand'));
 console.log(showBike(bike1, 'year'));
+//console.log(showBike(bike1, 'batata')) **Erro, a palavra batata não é uma propriedade dentro do objeto.
+//typeof type operator
+const car = "Celta";
+const car1 = "Corsa";
+const car3 = "Clio";
