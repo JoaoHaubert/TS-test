@@ -89,3 +89,27 @@ const cat1 = new Cat("Persian", "Candy");
 const cat2 = new Cat("Maine Coon", "Russel");
 console.log(cat1.fullCat);
 console.log(cat2.fullCat);
+//Setters
+class Guitar {
+    set guitarStyle(style) {
+        if (style === "") {
+            return;
+        }
+        this.style = style;
+        console.log("Style inserted with success!");
+    }
+    set guitarYear(year) {
+        if (year === 0) {
+            return;
+        }
+        this.year = year;
+        console.log("Year inserted with success!");
+    }
+    get getGuitar() {
+        return `The guitar style is an ${this.style} and it was built in ${this.year}`;
+    }
+}
+const myGuitar = new Guitar();
+myGuitar.guitarStyle = "Les Paul";
+myGuitar.guitarYear = 1978;
+console.log(myGuitar.getGuitar);
