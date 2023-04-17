@@ -381,3 +381,27 @@ const test1 = new testClass("Teobaldo")
 
 console.log(test1)
 console.log(test1.name)
+
+//Abstract class
+abstract class GuttenTag {
+    abstract showGreeting(): void
+}
+
+//const newGreet = new GuttenTag() **Cannot create an instance of an abstract class.ts(2511)**
+
+class TagGutten extends GuttenTag {
+    name: string;
+
+    constructor(name: string) {
+        super()
+        this.name = name
+    }
+
+    showGreeting(): void {
+        console.log(`Good afternoon in german is ${this.name}`)
+    }
+}
+
+const greet = new TagGutten("GUTTEN TAG")
+
+greet.showGreeting()
