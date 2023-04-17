@@ -274,3 +274,10 @@ class TagGutten extends GuttenTag {
 }
 const greet = new TagGutten("GUTTEN TAG");
 greet.showGreeting();
+//Relacao entre classes
+class Alpaca {
+}
+class Lhama {
+}
+const alpa = new Lhama();
+console.log(alpa);
