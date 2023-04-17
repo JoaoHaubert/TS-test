@@ -113,3 +113,23 @@ const myGuitar = new Guitar();
 myGuitar.guitarStyle = "Les Paul";
 myGuitar.guitarYear = 1978;
 console.log(myGuitar.getGuitar);
+class Restaurant {
+    constructor(dish) {
+        this.dish = dish;
+    }
+    foodName() {
+        return `The next dish is ${this.dish}`;
+    }
+}
+const firstDish = new Restaurant("Soup with toast");
+console.log(firstDish.foodName());
+class Restaurants {
+    constructor(dish) {
+        this.dish = dish;
+    }
+    foodName() {
+        return `The next dish is ${this.dish}`;
+    }
+}
+const secondDish = new Restaurants("Fish and potatoes");
+console.log(secondDish.foodName());

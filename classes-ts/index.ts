@@ -176,3 +176,40 @@ myGuitar.guitarStyle = "Les Paul"
 myGuitar.guitarYear = 1978
 
 console.log(myGuitar.getGuitar)
+
+//Henrancas de interfaces
+interface Food {
+    foodName(): string
+}
+
+class Restaurant implements Food {
+    dish
+
+    constructor(dish: string) {
+        this.dish = dish
+    }
+
+    foodName(){
+        return `The next dish is ${this.dish}`
+    }
+}
+
+const firstDish = new Restaurant("Soup with toast")
+
+console.log(firstDish.foodName())
+
+class Restaurants implements Food {
+    dish
+
+    constructor(dish: string) {
+        this.dish = dish
+    }
+
+    foodName(){
+        return `The next dish is ${this.dish}`
+    }
+}
+
+const secondDish = new Restaurants("Fish and potatoes")
+
+console.log(secondDish.foodName())
