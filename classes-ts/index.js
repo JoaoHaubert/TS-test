@@ -146,3 +146,52 @@ class NovaBatata extends Batata {
 }
 const myPotato = new NovaBatata();
 myPotato.someBatata();
+//Visibilidade - public
+class Num {
+    constructor() {
+        this.x = 10;
+    }
+}
+const showNum = new Num();
+console.log(showNum.x);
+//Visibilidade - protected
+class Nume {
+    constructor() {
+        this.x = 90;
+    }
+    protectedMethod() {
+        console.log('This method is protected');
+    }
+}
+class Numer extends Nume {
+    showNum() {
+        console.log("X:" + this.x);
+    }
+    showProtectedMethod() {
+        this.protectedMethod();
+    }
+}
+const numInstance = new Numer();
+const numInstance2 = new Numer();
+numInstance.showNum();
+numInstance2.showProtectedMethod();
+//Visibilidade - private
+class PrivateJet {
+    constructor() {
+        this.name = "Private Jet";
+    }
+    showName() {
+        return this.name;
+    }
+    privateJet() {
+        console.log("Jato Privado");
+    }
+    showPrivateMethod() {
+        this.privateJet();
+    }
+}
+const privateObj = new PrivateJet();
+//console.log(privateObj.name) **Erro, avisando que a propriedade esta privada.**
+console.log(privateObj.showName());
+privateObj.showPrivateMethod();
+//Metodo private so pode ser acessado pela propria classe, se tentar usar um extends para outra classe, nao tera como acessar o metodo.**
