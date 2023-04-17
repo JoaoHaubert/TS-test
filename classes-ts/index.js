@@ -48,3 +48,16 @@ const mclaren = new SportsCar("McLaren", 430);
 console.log(mclaren);
 console.log(mclaren.name);
 console.log(mclaren.speedkm);
+//Metodos
+class Goblin {
+    constructor(name) {
+        this.name = name;
+    }
+    greeting() {
+        console.log("Time is money");
+    }
+}
+const drakenios = new Goblin("Drakenios");
+drakenios.greeting();
+console.log(drakenios.name);
+console.log(drakenios);
