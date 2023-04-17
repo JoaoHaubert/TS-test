@@ -195,3 +195,12 @@ const privateObj = new PrivateJet();
 console.log(privateObj.showName());
 privateObj.showPrivateMethod();
 //Metodo private so pode ser acessado pela propria classe, se tentar usar um extends para outra classe, nao tera como acessar o metodo.**
+//Static members
+class StaticCar {
+    static carMethod() {
+        console.log("Metodo estatico, sempre vai aparecer o mesmo valor");
+    }
+}
+StaticCar.prop = "Celta Estatico";
+console.log(StaticCar.prop);
+StaticCar.carMethod();
