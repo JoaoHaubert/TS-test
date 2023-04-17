@@ -229,3 +229,24 @@ console.log(phone2.showBrand);
 console.log(phone2.showType);
 console.log(typeof phone2.brand);
 console.log(typeof phone2.type);
+//Parameters properties
+class newProduct {
+    constructor(id, qty, price) {
+        this.id = id;
+        this.qty = qty;
+        this.price = price;
+        this.id = id;
+        this.qty = qty;
+        this.price = price;
+    }
+    get getQty() {
+        return `The quantity is ${this.qty}`;
+    }
+    get getPrice() {
+        return `The price is ${this.price}`;
+    }
+}
+const newJersey = new newProduct("Lakers Jersey", 8, 89.99);
+console.log(newJersey.id);
+console.log(newJersey.getQty);
+console.log(newJersey.getPrice);
