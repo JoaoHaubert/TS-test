@@ -105,3 +105,16 @@ type myType = C extends A ? number : string
 const test1: myType = 62
 //const test2: myType = "eai" **Erro, pois conforme a condição de que C extende á A, logo só poderá ser tipo number.
 
+//Template literals type
+type textA = "text"
+
+type CustomType = `some ${textA}`
+
+const testing: CustomType = "some text"
+//const testing2: CustomType = "some text, oi" **Erro, literalmente tera de usar o valor inserido no type.
+
+type b1 = "Batata"
+type b2 = "Doce"
+
+type b3 = `${b1} | ${b2}`
+
