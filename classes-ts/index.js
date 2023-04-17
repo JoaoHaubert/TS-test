@@ -29,3 +29,22 @@ console.log(skate.shape);
 console.log(skate.wheels);
 skate.shape = "Flip";
 //skate.wheels = 5 **Erro, o readonly ja deixa lockado o numero 4, nao tem como alterar**
+//Heranca e super
+class Car {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const clio = new Car("Clio");
+console.log(clio);
+console.log(clio.name);
+class SportsCar extends Car {
+    constructor(name, speedkm) {
+        super(name);
+        this.speedkm = speedkm;
+    }
+}
+const mclaren = new SportsCar("McLaren", 430);
+console.log(mclaren);
+console.log(mclaren.name);
+console.log(mclaren.speedkm);
