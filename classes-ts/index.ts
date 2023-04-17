@@ -367,3 +367,17 @@ const newJersey = new newProduct("Lakers Jersey", 8, 89.99)
 console.log(newJersey.id)
 console.log(newJersey.getQty)
 console.log(newJersey.getPrice)
+
+//Class expression
+const testClass = class<T> {
+    name
+
+    constructor(name: T) {
+        this.name = name
+    }
+}
+
+const test1 = new testClass("Teobaldo")
+
+console.log(test1)
+console.log(test1.name)
