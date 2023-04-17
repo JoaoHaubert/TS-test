@@ -61,3 +61,15 @@ const drakenios = new Goblin("Drakenios");
 drakenios.greeting();
 console.log(drakenios.name);
 console.log(drakenios);
+//This
+class Dog {
+    constructor(breed, name) {
+        this.breed = breed;
+        this.name = name;
+    }
+    dogDetails() {
+        console.log(`The dog breed is ${this.breed} and it name is ${this.name}`);
+    }
+}
+const dog1 = new Dog("German Shepherd", "Russo");
+dog1.dogDetails();
