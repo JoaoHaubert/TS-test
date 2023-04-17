@@ -72,4 +72,20 @@ class Dog {
     }
 }
 const dog1 = new Dog("German Shepherd", "Russo");
+const dog2 = new Dog("Chihuahua", "Minie");
 dog1.dogDetails();
+dog2.dogDetails();
+//Getters
+class Cat {
+    constructor(breed, name) {
+        this.breed = breed;
+        this.name = name;
+    }
+    get fullCat() {
+        return `The cat breed is ${this.breed} and its name is ${this.name}`;
+    }
+}
+const cat1 = new Cat("Persian", "Candy");
+const cat2 = new Cat("Maine Coon", "Russel");
+console.log(cat1.fullCat);
+console.log(cat2.fullCat);
