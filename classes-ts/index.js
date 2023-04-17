@@ -133,3 +133,16 @@ class Restaurants {
 }
 const secondDish = new Restaurants("Fish and potatoes");
 console.log(secondDish.foodName());
+//Override method
+class Batata {
+    someBatata() {
+        console.log("A batata");
+    }
+}
+class NovaBatata extends Batata {
+    someBatata() {
+        console.log("Outra batata");
+    }
+}
+const myPotato = new NovaBatata();
+myPotato.someBatata();
