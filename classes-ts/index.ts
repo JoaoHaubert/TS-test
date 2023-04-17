@@ -303,3 +303,40 @@ class StaticCar {
 console.log(StaticCar.prop)
 
 StaticCar.carMethod()
+
+//Generic class
+class Phone<T, U> {
+    brand
+    type
+
+    constructor(brand: T, type: U) {
+        this.brand = brand
+        this.type = type
+    }
+
+    get showBrand() {
+        return `The phone brand is ${this.brand}`
+    }
+
+    get showType() {
+        return `The type is ${this.type}`
+    }
+}
+
+const phone1 = new Phone("Samsung", "S3")
+
+console.log(phone1)
+
+console.log(phone1.showBrand)
+console.log(phone1.showType)
+console.log(typeof phone1.brand)
+console.log(typeof phone1.type)
+
+const phone2 = new Phone ("Iphone", 11)
+
+console.log(phone2)
+
+console.log(phone2.showBrand)
+console.log(phone2.showType)
+console.log(typeof phone2.brand)
+console.log(typeof phone2.type)
