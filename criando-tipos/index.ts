@@ -35,3 +35,18 @@ const usedLaptop: laptop = {name: "X515", color: "Silver", size:"15'3", brand: "
 
 console.log(usedShoes)
 console.log(usedLaptop)
+
+//Type parameters
+function getItem<T, I extends keyof T>(obj: T, items: I) {
+    return `The item ${"items"} is in the object and it value is ${obj[items]}`
+}
+
+const computer = {
+    hd: "2TB",
+    ram: "32GB",
+    vga: "RTX 3060TI"
+}
+
+console.log(getItem(computer, "ram"))
+console.log(getItem(computer, "hd"))
+console.log(getItem(computer, "vga"))
