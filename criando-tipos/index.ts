@@ -94,3 +94,14 @@ function showMaxSpeed(maxSpeed: maxSpeed) {
 }
 
 showMaxSpeed(newSports.maxSpeedKm)
+
+//Conditional Expression Type
+interface A {}
+
+interface C extends A {}
+
+type myType = C extends A ? number : string
+
+const test1: myType = 62
+//const test2: myType = "eai" **Erro, pois conforme a condição de que C extende á A, logo só poderá ser tipo number.
+

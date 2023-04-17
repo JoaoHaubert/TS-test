@@ -53,3 +53,5 @@ function showMaxSpeed(maxSpeed) {
     console.log(`The SportsCar max speed is ${maxSpeed}km/h`);
 }
 showMaxSpeed(newSports.maxSpeedKm);
+const test1 = 62;
+//const test2: myType = "eai" **Erro, pois conforme a condição de que C extende á A, logo só poderá ser tipo number.
