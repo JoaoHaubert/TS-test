@@ -15,3 +15,5 @@ showDodge()
 //Alias para import
 import { nome as n } from "./change";
 console.log(n)
+
+//
