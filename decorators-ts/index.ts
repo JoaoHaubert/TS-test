@@ -24,3 +24,49 @@ class myClass {
 const myObj = new myClass()
 
 myObj.testing()
+
+//Multiplos decorators
+function aCar() {
+    return function(
+        target: any,
+        propertKey: string,
+        descriptor: PropertyDescriptor
+    ) {
+        console.log("This is car A starting")
+    }
+}
+
+function bCar() {
+    return function(
+        target: any,
+        propertKey: string,
+        descriptor: PropertyDescriptor
+    ) {
+        console.log("This is car B starting")
+    }
+}
+
+function cCar() {
+    return function(
+        target: any,
+        propertKey: string,
+        descriptor: PropertyDescriptor
+    ) {
+        console.log("This is car C starting")
+    }
+}
+
+class myCars {
+    name!: string
+
+    @aCar()
+    @bCar()
+    @cCar()
+    turningOff() {
+        console.log("Turning the cars off")
+    }
+}
+
+const stopCar = new myCars()
+
+stopCar.turningOff()

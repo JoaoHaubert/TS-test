@@ -25,3 +25,31 @@ __decorate([
 ], myClass.prototype, "testing", null);
 const myObj = new myClass();
 myObj.testing();
+//Multiplos decorators
+function aCar() {
+    return function (target, propertKey, descriptor) {
+        console.log("This is car A starting");
+    };
+}
+function bCar() {
+    return function (target, propertKey, descriptor) {
+        console.log("This is car B starting");
+    };
+}
+function cCar() {
+    return function (target, propertKey, descriptor) {
+        console.log("This is car C starting");
+    };
+}
+class myCars {
+    turningOff() {
+        console.log("Turning the cars off");
+    }
+}
+__decorate([
+    aCar(),
+    bCar(),
+    cCar()
+], myCars.prototype, "turningOff", null);
+const stopCar = new myCars();
+stopCar.turningOff();
