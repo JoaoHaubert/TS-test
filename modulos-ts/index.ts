@@ -19,3 +19,19 @@ console.log(n)
 //Importando tudo
 import * as math from "./math"
 console.log(math)
+
+//Importando tipos
+import { User } from "./typeimport";
+class Costumer implements User {
+    name
+    age 
+
+    constructor(name: string, age: number) {
+        this.name = name
+        this.age = age
+    }
+}
+
+const rodolfo = new Costumer("Rodolfo", 36)
+
+console.log(rodolfo)

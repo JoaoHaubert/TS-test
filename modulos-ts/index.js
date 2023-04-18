@@ -43,3 +43,11 @@ console.log(change_1.nome);
 //Importando tudo
 const math = __importStar(require("./math"));
 console.log(math);
+class Costumer {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+const rodolfo = new Costumer("Rodolfo", 36);
+console.log(rodolfo);
