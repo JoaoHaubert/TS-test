@@ -16,4 +16,6 @@ showDodge()
 import { nome as n } from "./change";
 console.log(n)
 
-//
+//Importando tudo
+import * as math from "./math"
+console.log(math)
