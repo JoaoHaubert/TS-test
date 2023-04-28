@@ -59,9 +59,9 @@ function cCar() {
 class myCars {
     name!: string
 
-    @aCar()
-    @bCar()
     @cCar()
+    @bCar()
+    @aCar()
     turningOff() {
         console.log("Turning the cars off")
     }
@@ -70,3 +70,25 @@ class myCars {
 const stopCar = new myCars()
 
 stopCar.turningOff()
+
+//Class decorator
+function PotatoDec(constructor: Function) {
+    console.log(constructor)
+    if (constructor.name === "Potato"){
+        console.log("A potato has been fried")
+    }
+}
+
+@PotatoDec
+class Potato {
+    type
+
+    constructor(type: string) {
+        this.type = type;
+    }
+}
+
+const sweetPotato = new Potato("Sweet Potato")
+
+console.log(sweetPotato)
+console.log(sweetPotato.type)

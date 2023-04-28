@@ -47,9 +47,27 @@ class myCars {
     }
 }
 __decorate([
-    aCar(),
+    cCar(),
     bCar(),
-    cCar()
+    aCar()
 ], myCars.prototype, "turningOff", null);
 const stopCar = new myCars();
 stopCar.turningOff();
+//Class decorator
+function PotatoDec(constructor) {
+    console.log(constructor);
+    if (constructor.name === "Potato") {
+        console.log("A potato has been fried");
+    }
+}
+let Potato = class Potato {
+    constructor(type) {
+        this.type = type;
+    }
+};
+Potato = __decorate([
+    PotatoDec
+], Potato);
+const sweetPotato = new Potato("Sweet Potato");
+console.log(sweetPotato);
+console.log(sweetPotato.type);
