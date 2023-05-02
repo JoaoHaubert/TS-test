@@ -92,3 +92,29 @@ const sweetPotato = new Potato("Sweet Potato")
 
 console.log(sweetPotato)
 console.log(sweetPotato.type)
+
+//Method decorator
+function enumerable(value: boolean) {
+    return function(
+        target: any,
+        propertKey: string,
+        descriptor: PropertyDescriptor
+    ) {
+        descriptor.enumerable = value
+    }
+}
+class Ferrari {
+    car
+
+    constructor(car: string){
+        this.car = car
+    }
+    @enumerable(false)
+    showCar() {
+        return `This Ferrari is an ${this.car}`
+    }
+}
+
+const roma = new Ferrari("Roma")
+
+console.log(roma.showCar())

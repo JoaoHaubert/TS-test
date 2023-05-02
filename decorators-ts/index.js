@@ -71,3 +71,22 @@ Potato = __decorate([
 const sweetPotato = new Potato("Sweet Potato");
 console.log(sweetPotato);
 console.log(sweetPotato.type);
+//Method decorator
+function enumerable(value) {
+    return function (target, propertKey, descriptor) {
+        descriptor.enumerable = value;
+    };
+}
+class Ferrari {
+    constructor(car) {
+        this.car = car;
+    }
+    showCar() {
+        return `This Ferrari is an ${this.car}`;
+    }
+}
+__decorate([
+    enumerable(false)
+], Ferrari.prototype, "showCar", null);
+const roma = new Ferrari("Roma");
+console.log(roma.showCar());
