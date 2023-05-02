@@ -138,3 +138,28 @@ __decorate([
 ], ID.prototype, "id", void 0);
 const joao = new ID("1");
 console.log(joao);
+//Real class decorator example
+function createDate(created) {
+    created.prototype.createdAt = new Date();
+}
+let Audi = class Audi {
+    constructor(car) {
+        this.car = car;
+    }
+};
+Audi = __decorate([
+    createDate
+], Audi);
+let Ford = class Ford {
+    constructor(car) {
+        this.car = car;
+    }
+};
+Ford = __decorate([
+    createDate
+], Ford);
+const rs4 = new Audi("RS4");
+const fusion = new Ford("Fusion");
+console.log(rs4);
+console.log(rs4.createdAt);
+console.log(fusion);

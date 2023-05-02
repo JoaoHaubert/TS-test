@@ -175,3 +175,34 @@ class ID {
 const joao = new ID("1")
 
 console.log(joao)
+
+//Real class decorator example
+function createDate(created: Function) {
+    created.prototype.createdAt = new Date();
+}
+
+@createDate
+class Audi {
+    car
+    createdAt?: Date 
+
+    constructor(car: string) {
+        this.car = car
+    }
+}
+
+@createDate
+class Ford {
+    car
+
+    constructor(car: string) {
+        this.car = car
+    }
+}
+
+const rs4 = new Audi("RS4")
+const fusion = new Ford("Fusion")
+
+console.log(rs4)
+console.log(rs4.createdAt)
+console.log(fusion)
