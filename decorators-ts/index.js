@@ -114,3 +114,27 @@ const compass = new Jeep("Compass", 2016);
 console.log(compass.showCar);
 console.log(compass.showYear);
 console.log(compass);
+//Property decorator
+function formatNumber(target, propertyKey) {
+    let value;
+    const getter = function () {
+        return value;
+    };
+    const setter = function (newVal) {
+        value = newVal.padStart(5, "0");
+    };
+    Object.defineProperty(target, propertyKey, {
+        set: setter,
+        get: getter
+    });
+}
+class ID {
+    constructor(id) {
+        this.id = id;
+    }
+}
+__decorate([
+    formatNumber
+], ID.prototype, "id", void 0);
+const joao = new ID("1");
+console.log(joao);
