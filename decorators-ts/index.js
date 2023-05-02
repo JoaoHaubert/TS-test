@@ -89,4 +89,28 @@ __decorate([
     enumerable(false)
 ], Ferrari.prototype, "showCar", null);
 const roma = new Ferrari("Roma");
+console.log(roma);
 console.log(roma.showCar());
+//Acessor decorator
+class Jeep {
+    constructor(car, year) {
+        this.car = car;
+        this.year = year;
+    }
+    get showCar() {
+        return `The Jeep is an ${this.car}`;
+    }
+    get showYear() {
+        return `It is from year: ${this.year}`;
+    }
+}
+__decorate([
+    enumerable(true)
+], Jeep.prototype, "showCar", null);
+__decorate([
+    enumerable(true)
+], Jeep.prototype, "showYear", null);
+const compass = new Jeep("Compass", 2016);
+console.log(compass.showCar);
+console.log(compass.showYear);
+console.log(compass);

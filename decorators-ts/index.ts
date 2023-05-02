@@ -116,5 +116,31 @@ class Ferrari {
 }
 
 const roma = new Ferrari("Roma")
-
+console.log(roma)
 console.log(roma.showCar())
+
+//Acessor decorator
+class Jeep {
+    car?
+    year?
+
+    constructor(car: string, year: number) {
+        this.car = car;
+        this.year = year
+    }
+    @enumerable(true)
+    get showCar() {
+        return `The Jeep is an ${this.car}`
+    }
+    @enumerable(true)
+    get showYear() {
+        return `It is from year: ${this.year}`
+    }
+}
+
+const compass = new Jeep("Compass", 2016)
+
+console.log(compass.showCar)
+console.log(compass.showYear)
+
+console.log(compass)
