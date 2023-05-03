@@ -138,7 +138,7 @@ __decorate([
 ], ID.prototype, "id", void 0);
 const joao = new ID("1");
 console.log(joao);
-//Real class decorator example
+//Real example - class decorator
 function createDate(created) {
     created.prototype.createdAt = new Date();
 }
@@ -163,3 +163,37 @@ const fusion = new Ford("Fusion");
 console.log(rs4);
 console.log(rs4.createdAt);
 console.log(fusion);
+//Real example - method decorator
+function checkCafe() {
+    return function (target, key, descriptor) {
+        const childFunction = descriptor.value;
+        console.log(childFunction);
+        descriptor.value = function (...args) {
+            if (args[1] === true) {
+                console.log("The coffee has already been selected");
+                return null;
+            }
+            else {
+                return childFunction.apply(this, args);
+            }
+        };
+        return descriptor;
+    };
+}
+class Cafe {
+    constructor() {
+        this.cafeDone = false;
+    }
+    cafe(content, cafeDone) {
+        this.cafeDone = true;
+        console.log(`The coffee used is ${content}`);
+    }
+}
+__decorate([
+    checkCafe()
+], Cafe.prototype, "cafe", null);
+const newCafe = new Cafe();
+const newCafe2 = new Cafe();
+newCafe.cafe("Brazilian Arabic", newCafe.cafeDone);
+newCafe.cafe("Brazilian Arabic", newCafe.cafeDone);
+newCafe2.cafe("Brazilian Bourbon", newCafe2.cafeDone);
