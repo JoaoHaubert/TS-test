@@ -245,3 +245,42 @@ newCafe.cafe("Brazilian Arabic", newCafe.cafeDone)
 newCafe.cafe("Brazilian Arabic", newCafe.cafeDone)
 
 newCafe2.cafe("Brazilian Bourbon", newCafe2.cafeDone)
+
+//Real example - property decorator
+function maxSides(limit: number) {
+
+    return function(target: Object, propertyKey: string) {
+        let value: number
+
+        const getter = function() {
+            return value
+        }
+
+        const setter = function(newValue: number) {
+            if(newValue > limit) {
+                console.log(`The cube cant have more than ${limit} sides`)
+                return
+            } else {
+                value = newValue
+            }
+        }
+
+        Object.defineProperty(target, propertyKey, {
+            get: getter,
+            set: setter
+        }) 
+    }
+}
+
+class Cube {
+    @maxSides(6)
+    sides
+
+    constructor(sides: number) {
+        this.sides = sides
+    }
+}
+
+const sixSides = new Cube(6)
+
+console.log(sixSides)
