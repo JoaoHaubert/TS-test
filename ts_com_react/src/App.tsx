@@ -1,5 +1,6 @@
 import React from 'react';
-
+//Import component
+import FirstComponent from './components/FirstComponent'
 
 function App() {
   //Variables
@@ -20,6 +21,7 @@ function App() {
         <p>She is running!</p>
       }
       <p>{greet(name)}</p>
+      <FirstComponent />
     </div>
   );
 }
