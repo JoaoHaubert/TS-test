@@ -1,7 +1,9 @@
 import React from 'react';
 //Import component
-import FirstComponent from './components/FirstComponent'
-
+import FirstComponent from './components/FirstComponent';
+//Destructuring
+import SecondComponent from './components/SecondComponent';
+import Desctructuring from './components/Destructuring';
 function App() {
   //Variables
   const name: string = "Ayla"
@@ -12,6 +14,8 @@ function App() {
   const greet = (name: string): string => {
     return `Hello, ${name}!`
   }
+
+
   return (
     <div className="App">
       <h1>React tsx</h1>
@@ -22,6 +26,13 @@ function App() {
       }
       <p>{greet(name)}</p>
       <FirstComponent />
+      <SecondComponent name="Second" />
+      <Desctructuring 
+      title="Local party" 
+      content= "Let me know here" 
+      commentsQty= {5}
+      tags= {["summer", "party"]}
+      />
     </div>
   );
 }
