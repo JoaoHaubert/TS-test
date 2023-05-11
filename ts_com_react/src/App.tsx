@@ -1,11 +1,16 @@
 import React from 'react';
 //Import component
 import FirstComponent from './components/FirstComponent';
-//Destructuring
+//Destructuring //Enum
 import SecondComponent from './components/SecondComponent';
 import Desctructuring, { Category } from './components/Destructuring';
 //useState
 import State from './components/State';
+//Type
+type textOrNull = string | null
+//FixedType
+type fixedValue = "Eai" | "Ola" | "Oi"
+
 function App() {
   //Variables
   const name: string = "Ayla"
@@ -16,7 +21,11 @@ function App() {
   const greet = (name: string): string => {
     return `Hello, ${name}!`
   }
-
+  //Type
+  const firstText: textOrNull = "testing text"
+  let secondText: textOrNull = null
+ //FixedType
+  const fixedText: fixedValue = "Oi"
 
   return (
     <div className="App">
@@ -44,6 +53,11 @@ function App() {
       category={Category.P}
       />
       <State />
+
+      <p>{firstText && <p>Testing text again</p>}</p>
+      <p>{secondText && <p>aaaaaaa</p>}</p>
+
+      <p>Fixed type: {fixedText}</p>
     </div>
   );
 }
