@@ -3,7 +3,7 @@ import React from 'react';
 import FirstComponent from './components/FirstComponent';
 //Destructuring
 import SecondComponent from './components/SecondComponent';
-import Desctructuring from './components/Destructuring';
+import Desctructuring, { Category } from './components/Destructuring';
 //useState
 import State from './components/State';
 function App() {
@@ -34,12 +34,14 @@ function App() {
       content= "Let me know here" 
       commentsQty= {5}
       tags= {["summer", "party", "potato"]}
+      category={Category.JS}
       />
       <Desctructuring 
       title="Front end developer" 
       content= "JS and TS user" 
       commentsQty= {2}
       tags= {["tech", "javascript"]}
+      category={Category.P}
       />
       <State />
     </div>
